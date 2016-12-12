@@ -5,18 +5,29 @@
  */
 package resolutionsimplexe;
 
+import java.awt.TextField;
+
 /**
  *
  * @author Basti
  */
 public class Interface2 extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Interface2
-     */
+   
     public Interface2() {
         initComponents();
+        creating();
     }
+    
+    public void creating(){
+        for (int i=0; i<10; i++) { 
+        TextField tf = new TextField("ceci est le no " + i); // il est essentiel de faire le new ici !! 
+        jPanel1.add(tf); 
+} 
+        
+        
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -43,6 +54,7 @@ public class Interface2 extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jTextField5 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,7 +93,7 @@ public class Interface2 extends javax.swing.JFrame {
         jPanel1.add(jTextField1);
         jTextField1.setBounds(290, 190, 80, 30);
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(470, 190, 70, 30);
+        jTextField2.setBounds(690, 190, 70, 30);
 
         jLabel5.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(153, 0, 0));
@@ -111,6 +123,8 @@ public class Interface2 extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox1);
         jComboBox1.setBounds(590, 190, 70, 30);
+        jPanel1.add(jTextField5);
+        jTextField5.setBounds(470, 190, 70, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -178,5 +192,6 @@ public class Interface2 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }
